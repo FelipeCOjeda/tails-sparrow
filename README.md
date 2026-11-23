@@ -16,9 +16,10 @@ A versão pública deve ser reconstruída a partir de uma imagem oficial verific
 
 ## Verificar, gravar e iniciar
 
-1. Baixe a futura imagem e o arquivo SHA256SUMS da mesma versão. Se o download estiver em um arquivo compactado, extraia o arquivo .img.
-2. No PowerShell, rode **Get-FileHash -Algorithm SHA256 -LiteralPath .\tails-sparrow.img** e compare todos os 64 caracteres com o hash do .img em SHA256SUMS. O hash verifica integridade e uma assinatura verificável ajuda a confirmar procedência.
-3. Use um pendrive com capacidade real igual ou maior que o tamanho da imagem descompactada. Faça backup, selecione o .img no gravador e confirme o dispositivo de destino. A gravação apaga os dados do pendrive. [Guia do Tails para Windows](https://tails.net/install/windows/).
-4. Reinicie o computador, selecione o pendrive no menu de inicialização e aguarde a tela de boas-vindas. Crie sua própria persistência se precisar guardar dados. [Configuração da persistência](https://tails.net/doc/persistent_storage/configure/).
+1. **Baixe.** Quando a versão pública estiver disponível, baixe o arquivo `tails-sparrow.img` e sua assinatura `tails-sparrow.img.asc`.
+2. **Verifique com GPG.** Confira a impressão digital da chave pública do projeto por um canal confiável, importe essa chave e rode `gpg --verify tails-sparrow.img.asc tails-sparrow.img`. Prossiga somente se a assinatura for válida e pertencer à chave esperada. O arquivo SHA256SUMS da versão também permitirá conferir o hash com `Get-FileHash -Algorithm SHA256 -LiteralPath .\tails-sparrow.img`. [Manual do GnuPG](https://gnupg.org/gph/en/manual.html).
+3. **Grave e inicie.** No Rufus, selecione o pendrive, escolha o arquivo .img e clique em **Iniciar**. Se aparecer a opção, escolha **modo DD**. No balenaEtcher, escolha **Flash from file**, selecione o .img e o pendrive e clique em **Flash!**. O pendrive precisa comportar a imagem inteira. Faça backup, pois a gravação apaga o conteúdo do dispositivo selecionado. Reinicie e escolha o pendrive no menu de boot.
+
+O Tails recomenda o Rufus no Windows e deixou de recomendar o balenaEtcher por motivos de privacidade. [Guia do Tails para Windows](https://tails.net/install/windows/).
 
 O SHA256SUMS da versão pública será gerado a partir da imagem final. O GitHub Releases aceita arquivos individuais menores que 2 GiB. Se o arquivo compactado ultrapassar o limite, o botão de download direto precisará apontar para um armazenamento de objetos com capacidade para o arquivo inteiro. [Limites do GitHub Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases).
