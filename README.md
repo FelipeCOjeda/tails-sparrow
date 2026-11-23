@@ -8,6 +8,18 @@ Ainda não há uma imagem pública. A cópia de trabalho foi clonada com armazen
 
 A versão pública deve ser reconstruída a partir de uma imagem oficial verificada, sem partição persistente clonada, dados pessoais, carteiras, seeds, chaves, perfis ou credenciais. Crie o armazenamento persistente no primeiro uso e defina uma frase secreta exclusiva antes de salvar dados. Se você usa a senha da cópia em outro lugar, substitua-a antes de voltar a usar o armazenamento.
 
+## Altere a senha do persistente no primeiro acesso
+
+Se o seu pendrive já vem com armazenamento persistente configurado, troque a senha logo no primeiro acesso, antes de salvar dados.
+
+1. Na tela de boas-vindas, desbloqueie o armazenamento persistente com a senha atual e inicie o Tails.
+2. Abra **Aplicativos → Tails → Armazenamento persistente**.
+3. Clique em **Alterar frase secreta** (Change Passphrase), na barra de título.
+4. Digite a senha atual, informe uma nova frase secreta exclusiva e repita a nova senha no campo de confirmação. Clique em **Alterar**.
+5. Reinicie o Tails e confirme que a nova senha desbloqueia o armazenamento persistente.
+
+A troca protege o pendrive em que foi feita. Cópias anteriores continuam acessíveis com a senha antiga. [Documentação do Tails](https://translate.tails.net/projects/tails/wikisrcdocpersistent_storagepassphrase-po/en/).
+
 ## Versões e compatibilidade
 
 - [Sparrow Wallet 2.5.6](https://sparrowwallet.com/download/) tem distribuição oficial para Linux. Verifique a assinatura do manifesto antes de incorporar o pacote.
