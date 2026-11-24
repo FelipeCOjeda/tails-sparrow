@@ -10,6 +10,8 @@ A versão pública inclui armazenamento persistente pré-configurado. Prepare es
 
 ## Altere a senha do persistente no primeiro acesso
 
+**Senha inicial do armazenamento persistente** `SatoshiNakamoto21`
+
 Se o seu pendrive já vem com armazenamento persistente configurado, troque a senha logo no primeiro acesso, antes de salvar dados.
 
 1. Na tela de boas-vindas, desbloqueie o armazenamento persistente com a senha atual e inicie o Tails.
