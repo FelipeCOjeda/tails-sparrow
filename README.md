@@ -1,12 +1,12 @@
 # Tails com Sparrow
 
-Projeto independente de uma imagem USB baseada no Tails, sem afiliação com o Tails, a Sparrow Wallet ou a Mozilla. A imagem está em preparação. [Página do projeto](https://felipecojeda.github.io/tails-sparrow/).
+Projeto independente de uma imagem USB baseada no Tails com armazenamento persistente pré-configurado, sem afiliação com o Tails, a Sparrow Wallet ou a Mozilla. A imagem está em preparação. [Página do projeto](https://felipecojeda.github.io/tails-sparrow/).
 
 ## Download
 
 Ainda não há uma imagem pública. A cópia de trabalho foi clonada com armazenamento persistente e uma senha conhecida. Quem tiver a cópia e a senha pode acessar os dados nela. Trocar a senha no próprio pendrive não protege cópias anteriores.
 
-A versão pública deve ser reconstruída a partir de uma imagem oficial verificada, sem partição persistente clonada, dados pessoais, carteiras, seeds, chaves, perfis ou credenciais. Crie o armazenamento persistente no primeiro uso e defina uma frase secreta exclusiva antes de salvar dados. Se você usa a senha da cópia em outro lugar, substitua-a antes de voltar a usar o armazenamento.
+A versão pública inclui armazenamento persistente pré-configurado. Prepare essa partição em um ambiente dedicado à distribuição, com apenas os arquivos e ajustes necessários ao produto. Exclua dados pessoais, carteiras, seeds, chaves privadas e credenciais da preparação da imagem.
 
 ## Altere a senha do persistente no primeiro acesso
 
@@ -18,7 +18,7 @@ Se o seu pendrive já vem com armazenamento persistente configurado, troque a se
 4. Digite a senha atual, informe uma nova frase secreta exclusiva e repita a nova senha no campo de confirmação. Clique em **Alterar**.
 5. Reinicie o Tails e confirme que a nova senha desbloqueia o armazenamento persistente.
 
-A troca protege o pendrive em que foi feita. Cópias anteriores continuam acessíveis com a senha antiga. [Documentação do Tails](https://translate.tails.net/projects/tails/wikisrcdocpersistent_storagepassphrase-po/en/).
+A troca altera a frase secreta exigida pelo pendrive. Cópias da imagem continuam acessíveis com a senha inicial. Uma partição LUKS clonada também compartilha a chave de criptografia do volume com as outras cópias. A troca da frase secreta mantém essa chave. [Documentação do Tails](https://translate.tails.net/projects/tails/wikisrcdocpersistent_storagepassphrase-po/en/).
 
 ## Versões e compatibilidade
 
