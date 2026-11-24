@@ -7,7 +7,7 @@
 <title>Tails com Sparrow</title>
 <style>
 :root{color-scheme:dark;--bg:#101019;--panel:#1b1a29;--ink:#f7f4fc;--muted:#c6bfd6;--accent:#d5b8ff;--border:#3d344f}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 85% 0,#32234b,transparent 46%),var(--bg);color:var(--ink);font:17px/1.65 system-ui,sans-serif}main,header{max-width:1050px;margin:auto;padding-inline:clamp(24px,6vw,72px)}header{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:22px;border-bottom:1px solid var(--border)}a{color:var(--accent);text-underline-offset:.22em}a:focus-visible{outline:2px solid var(--accent);outline-offset:5px}.hero{padding-block:clamp(48px,10vw,105px) 42px}.label{color:var(--accent);font-weight:650}h1{font-size:clamp(3rem,9vw,6.5rem);letter-spacing:-.075em;line-height:1;margin:.14em 0 .3em}p{max-width:64ch;color:var(--muted)}button{background:#343041;border:1px solid #675a7b;color:#e3d9ed;border-radius:10px;padding:13px 21px;font:inherit;font-weight:650}section{padding:23px clamp(18px,4vw,36px);background:var(--panel);border:1px solid var(--border);border-radius:16px;margin-bottom:20px}h2{font-size:1.35rem;margin:0}section p{margin-bottom:0}footer{padding-block:16px 44px;color:var(--muted);font-size:.94rem}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 85% 0,#32234b,transparent 46%),var(--bg);color:var(--ink);font:17px/1.65 system-ui,sans-serif}main,header{max-width:1050px;margin:auto;padding-inline:clamp(24px,6vw,72px)}header{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:22px;border-bottom:1px solid var(--border)}a{color:var(--accent);text-underline-offset:.22em}a:focus-visible{outline:2px solid var(--accent);outline-offset:5px}.hero{padding-block:clamp(48px,10vw,105px) 42px}.label{color:var(--accent);font-weight:650}h1{font-size:clamp(3rem,9vw,6.5rem);letter-spacing:-.075em;line-height:1;margin:.14em 0 .3em}p{max-width:64ch;color:var(--muted)}.download{display:inline-block;text-decoration:none;background:var(--accent);border:1px solid var(--accent);color:var(--bg);border-radius:10px;padding:13px 21px;font:inherit;font-weight:650}section{padding:23px clamp(18px,4vw,36px);background:var(--panel);border:1px solid var(--border);border-radius:16px;margin-bottom:20px}h2{font-size:1.35rem;margin:0}section p{margin-bottom:0}footer{padding-block:16px 44px;color:var(--muted);font-size:.94rem}
 </style>
 </head>
 <body>
@@ -16,9 +16,9 @@
 <div class="hero">
 <div class="label">Projeto independente</div>
 <h1>Tails com Sparrow</h1>
-<p>Imagem USB personalizada com armazenamento persistente pré-configurado, Sparrow Wallet 2.5.6 e Firefox 160 previstos. A compatibilidade da imagem ainda precisa ser testada.</p>
-<button type="button" disabled aria-describedby="download-status">Download indisponível</button>
-<p id="download-status">A imagem ainda está em preparação para distribuição.</p>
+<p>Imagem USB personalizada com armazenamento persistente pré-configurado. Versões informadas para a imagem: Sparrow Wallet 2.5.6 e Firefox 160.</p>
+<a class="download" href="https://github.com/FelipeCOjeda/tails-sparrow/releases/tag/v0.1.0" aria-describedby="download-status">Baixar os 3 volumes</a>
+<p id="download-status">GitHub Releases · 5,74 GiB no total</p>
 </div>
 <section aria-labelledby="persistencia">
 <h2 id="persistencia">Persistência e segurança</h2>
@@ -27,8 +27,8 @@
 <section aria-labelledby="guia">
 <h2 id="guia">Como instalar no pendrive</h2>
 <ol>
-<li>Baixe a imagem <code>.img</code> e a assinatura GPG <code>.asc</code>.</li>
-<li>Confirme a assinatura com a chave pública do projeto antes de gravar.</li>
+<li>Baixe os três volumes para a mesma pasta. Abra o <code>.7z.001</code> no 7-Zip e extraia o <code>.img</code>.</li>
+<li>Compare o SHA-256 do <code>.img</code> com o <code>SHA256SUMS</code> do Release. Esta versão ainda não tem assinatura GPG.</li>
 <li>Grave a imagem com o Rufus ou balenaEtcher e reinicie pelo pendrive.</li>
 </ol>
 <p>A gravação apaga o conteúdo do pendrive. <a href="https://github.com/FelipeCOjeda/tails-sparrow#verificar-gravar-e-iniciar">Veja os comandos de verificação e o passo a passo.</a></p>

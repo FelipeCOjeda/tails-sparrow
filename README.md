@@ -4,9 +4,9 @@ Projeto independente de uma imagem USB baseada no Tails com armazenamento persis
 
 ## Download
 
-Ainda não há uma imagem pública. A cópia de trabalho foi clonada com armazenamento persistente e uma senha conhecida. Quem tiver a cópia e a senha pode acessar os dados nela. Trocar a senha no próprio pendrive não protege cópias anteriores.
+[Baixar os três volumes no GitHub Releases](https://github.com/FelipeCOjeda/tails-sparrow/releases/tag/v0.1.0). O pacote completo ocupa 5,74 GiB e a imagem extraída ocupa 14,46 GiB.
 
-A versão pública inclui armazenamento persistente pré-configurado. Prepare essa partição em um ambiente dedicado à distribuição, com apenas os arquivos e ajustes necessários ao produto. Exclua dados pessoais, carteiras, seeds, chaves privadas e credenciais da preparação da imagem.
+A imagem inclui armazenamento persistente pré-configurado com uma senha inicial pública. Troque a senha no primeiro acesso, antes de guardar dados.
 
 ## Altere a senha do persistente no primeiro acesso
 
@@ -30,10 +30,8 @@ A troca altera a frase secreta exigida pelo pendrive. Cópias da imagem continua
 
 ## Verificar, gravar e iniciar
 
-1. **Baixe.** Quando a versão pública estiver disponível, baixe o arquivo `tails-sparrow.img` e sua assinatura `tails-sparrow.img.asc`.
-2. **Verifique com GPG.** Confira a impressão digital da chave pública do projeto por um canal confiável, importe essa chave e rode `gpg --verify tails-sparrow.img.asc tails-sparrow.img`. Prossiga somente se a assinatura for válida e pertencer à chave esperada. O arquivo SHA256SUMS da versão também permitirá conferir o hash com `Get-FileHash -Algorithm SHA256 -LiteralPath .\tails-sparrow.img`. [Manual do GnuPG](https://gnupg.org/gph/en/manual.html).
+1. **Baixe e extraia.** Salve os volumes .7z.001, .7z.002 e .7z.003 na mesma pasta. Abra apenas o .001 no 7-Zip e extraia o arquivo **tails sparrow.img**.
+2. **Verifique o SHA-256.** Baixe o SHA256SUMS do mesmo Release, rode `Get-FileHash -Algorithm SHA256 -LiteralPath '.\tails sparrow.img'` no PowerShell e compare o resultado com a linha do .img. Esta versão ainda não tem assinatura GPG.
 3. **Grave e inicie.** No Rufus, selecione o pendrive, escolha o arquivo .img e clique em **Iniciar**. Se aparecer a opção, escolha **modo DD**. No balenaEtcher, escolha **Flash from file**, selecione o .img e o pendrive e clique em **Flash!**. O pendrive precisa comportar a imagem inteira. Faça backup, pois a gravação apaga o conteúdo do dispositivo selecionado. Reinicie e escolha o pendrive no menu de boot.
 
 O Tails recomenda o Rufus no Windows e deixou de recomendar o balenaEtcher por motivos de privacidade. [Guia do Tails para Windows](https://tails.net/install/windows/).
-
-O SHA256SUMS da versão pública será gerado a partir da imagem final. O GitHub Releases aceita arquivos individuais menores que 2 GiB. Se o arquivo compactado ultrapassar o limite, o botão de download direto precisará apontar para um armazenamento de objetos com capacidade para o arquivo inteiro. [Limites do GitHub Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases).
